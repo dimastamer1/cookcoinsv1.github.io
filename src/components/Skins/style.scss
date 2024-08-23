@@ -1,0 +1,238 @@
+/** @format */
+
+.promo-code-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto; /* Убрать отрицательные отступы и автоматически центрировать */
+  padding: 25px; /* Установить значение padding в положительное */
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 3px solid #000;
+  transform: scale(0.9); /* Уменьшение масштаба на 90% */
+  transform-origin: top center;
+}
+
+.promo-code-container h1 {
+  font-family: 'Jaro', sans-serif;
+  color: rgb(0, 123, 255);
+  margin-bottom: 20px;
+  font-size: 18px; /* Уменьшено на 30% */
+  font-weight: bold;
+}
+
+.promo-code-container .promo-code-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Уменьшено на 30% */
+}
+
+.promo-code-container .promo-code-form input {
+  width: 100%;
+  max-width: 218px; /* Уменьшено на 30% */
+  padding: 9px; /* Уменьшено на 30% */
+  font-size: 14px; /* Уменьшено на 30% */
+  border: 1px solid #ddd;
+  border-radius: 7px; /* Уменьшено на 30% */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+  
+  &:focus {
+    border-color: rgb(0, 123, 255);
+    outline: none;
+  }
+}
+
+.promo-code-container .promo-code-form button {
+  width: 100%;
+  max-width: 218px; /* Уменьшено на 30% */
+  padding: 9px; /* Уменьшено на 30% */
+  font-size: 14px; /* Уменьшено на 30% */
+  border: none;
+  border-radius: 7px; /* Уменьшено на 30% */
+  background: linear-gradient(135deg, rgb(0, 123, 255), rgb(0, 105, 217));
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+  &:hover {
+    background: linear-gradient(135deg, rgb(0, 105, 217), rgb(0, 123, 255));
+    transform: scale(1.05);
+  }
+}
+
+.promo-code-container .promo-code-message {
+  margin-top: 12px; /* Уменьшено на 30% */
+  font-size: 14px; /* Уменьшено на 30% */
+  color: rgb(255, 69, 58);
+  font-weight: bold;
+}
+
+.promo-code-container .current-balance {
+  margin-top: 12px; /* Уменьшено на 30% */
+  font-size: 16px; /* Уменьшено на 30% */
+  color: rgb(0, 123, 255);
+  font-weight: bold;
+}
+
+.promo-code-container .navigate__home__btn {
+  margin-top: 12px; /* Уменьшено на 30% */
+  padding: 9px 18px; /* Уменьшено на 30% */
+  background: rgb(0, 123, 255);
+  color: white;
+  border: none;
+  border-radius: 5px; /* Уменьшено на 30% */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 14px; /* Уменьшено на 30% */
+  
+  &:hover {
+    background: rgb(0, 105, 217);
+    transform: scale(1.05);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&display=swap');
+
+
+
+
+/* Фоновый слой для всей страницы */
+.skin-page {
+  position: relative; /* Обеспечивает относительное позиционирование для псевдоэлемента */
+  height: 100vh; /* Высота экрана */
+  overflow: hidden; /* Блокируем прокрутку всей страницы */
+}
+
+/* Псевдоэлемент для фона */
+.skin-page::before {
+  content: ""; /* Пустое содержимое для псевдоэлемента */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+  z-index: -1; /* Помещаем псевдоэлемент за остальными элементами */
+}
+
+/* Стили для .skin-selector */
+.skin-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(5, 86, 236, 0.13); /* Полупрозрачный черный фон */
+  border-radius: 0px;
+  padding: 19px;
+  width: 90vw; /* Ширина 90% от ширины экрана */
+  height: 94%; /* Высота 90% от высоты экрана */
+  overflow-y: auto; /* Позволяет прокручивать содержимое */
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%); /* Смещение по X и Y */
+  font-family: 'Jaro', sans-serif;
+}
+
+
+
+/* Остальные стили остаются неизменными */
+.skin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c8fbff; /* Фоновый цвет кнопок */
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  top: 15%;
+  border: 2px solid #0e3055; 
+}
+
+.skin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}.skin-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.skin-info .skin-name {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.skin-info .skin-ownership {
+  color: rgb(128, 128, 128);
+  font-size: 14px;
+}
+
+.buySkinButton {
+  width: 95px;
+  height: 30px;
+  padding: 5px;
+  background: rgba(9, 160, 247, 0.966);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Jaro', sans-serif;
+}
+
+.selected-skin {
+  border: 3px solid lightgreen;
+  animation: apply-skin 0.5s ease-in-out;
+}
+
+.header-margin {
+  position: absolute; /* Абсолютное позиционирование для контроля размещения */
+  top: 0;
+  left: 130px;
+  background-color: rgba(0, 0, 0, 0); /* Цвет фона контейнера */
+  color: white; /* Белый цвет текста */
+  text-shadow: 
+  2px 2px 2px #0e3055, /* Основная тень */
+  -1px -1px 2px #0e305500, /* Альтернативная тень */
+  1px -1px 2px #0e305500, /* Альтернативная тень */
+  -1px 1px 2px rgba(134, 134, 134, 0); /* Альтернативная тень */
+  z-index: 1000; /* Высокий z-index для размещения выше всех элементов */
+}
+
+
+@keyframes apply-skin {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.navigate__home__btn {
+  /* Позиционирование кнопки "GO BACK" */
+  position: fixed; /* Фиксированное позиционирование относительно окна просмотра */
+  top: 10px; /* Расположение от верхнего края окна просмотра */
+  left: 10px; /* Расположение от левого края окна просмотра */
+  padding: 10px 20px; /* Увеличение padding для улучшения визуального восприятия */
+  background: rgb(0, 123, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  
+  &:hover {
+    background: rgb(0, 105, 217);
+    transform: scale(1.05);
+  }
+}

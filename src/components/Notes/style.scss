@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+.notes-container {
+  position: absolute; /* Позиционирование относительно всего экрана */
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Скрыть скролл-бары, если нужно */
+  display: flex;
+  justify-content: center; /* Центрировать содержимое по горизонтали */
+  align-items: center; /* Центрировать содержимое по вертикали */
+  background-color: #000; /* Например, черный фон для контраста */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ширина экрана */
+  height: 100vh; /* Высота экрана */
+  background: rgba(255, 255, 255, 0); /* Прозрачный фон контейнера */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Легкая тень для выделения */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Центрирует содержимое по вертикали */
+  font-family: 'Jaro', sans-serif;
+}
+
+.notes-header {
+  width: 100%;
+  height: 100%; /* Контейнер занимает верхние 20% */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Для корректного позиционирования кнопки внутри */
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Изображение масштабируется с сохранением пропорций */
+}
+
+
+.navigate__home__btn, .navigate__quests__btn {
+  margin: 10px 0;
+}
+
+.promo-code-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #ffffff00; /* Белый фон для простоты */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Легкая тень для выделения */
+  text-align: center;
+  border: none; /* Убрал обводку */
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%); /* Центрирование контейнера */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jaro', sans-serif;
+}
+
+.promo-code-container h1 {
+  color: rgb(0, 123, 255); /* Цвет заголовка */
+  margin-bottom: 20px; /* Отступ снизу для заголовка */
+  font-size: 18px; /* Размер шрифта для заголовка */
+  font-weight: bold; /* Жирный заголовок */
+  font-family: 'Jaro', sans-serif;
+}
+
+.promo-code-container .promo-code-form {
+  display: flex;
+  flex-direction: row; /* Изменено на строку */
+  align-items: center;
+  gap: 15px; /* Отступ между элементами формы */
+  font-family: 'Jaro', sans-serif;
+}
+
+.promo-code-container .promo-code-form input {
+  width: auto; /* Ширина автоматически подстраивается под содержимое */
+  max-width: 300px; /* Ширина поля ввода */
+  padding: 8px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  border: 2px solid #919191; /* Светлая граница */
+  border-radius: 15px; /* Скругленные углы */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease; /* Плавный переход цвета границы */
+  font-family: 'Jaro', sans-serif;
+}
+
+.promo-code-container .promo-code-form input:focus {
+  border-color: rgb(0, 123, 255); /* Цвет границы при фокусе */
+  outline: none; /* Убрал обводку по умолчанию */
+}
+
+.promo-code-container .promo-code-form button {
+  padding: 8px 16px; /* Внутренние отступы кнопки */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #ff11df; /* Основной цвет кнопки */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.342); /* Тень текста */
+  color: #d8d8d8; /* Белый текст на кнопке */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Плавный переход фона и увеличение */
+  font-weight: 700; /* Жирный текст */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+  font-family: 'Jaro', sans-serif;
+}
+
+.promo-code-container .promo-code-form button:hover {
+  background: #8b0062; /* Темнее цвет кнопки при наведении */
+  transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.promo-code-container .promo-code-message {
+  margin-top: 1px;
+  font-size: 17.5px; /* Размер шрифта для сообщения */
+  color: rgb(255, 69, 58); /* Цвет сообщения */
+  font-weight: bold;
+  padding: 15px 0; /* Высота за счет отступов */
+}
+
+/* Дизайн кнопок вне контейнера промокодов */
+.navigate__home__btn {
+  position: fixed;
+  top: -6px; /* Расположение от верхнего края окна просмотра */
+  left: 6px; /* Расположение от левого края окна просмотра */
+  padding: 10px 20px;
+  background-image: radial-gradient(circle at 50% -20.71%, #faffff 0, #d8f0fa 25%, #b5def2 50%, #92cbeb 75%, #72b9e5 100%);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(92, 92, 92); /* Черная обводка вокруг кнопки */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+}
+
+.navigate__home__btn:hover {
+  background-image: radial-gradient(circle at 50% -20.71%, #d0e0f0 0, #a0c1e0 25%, #7a9fcf 50%, #5478bf 75%, #2d5eab 100%);
+  transform: scale(1.05);
+}
+
+.rewards-info {
+  position: absolute;
+  left: 246px; /* Расстояние от левого края экрана */
+  bottom: 290px; /* Расстояние от нижнего края экрана, чтобы разместить информацию чуть выше кнопки */
+  display: flex;
+  gap: 10px; /* Отступ между элементами */
+  font-size: 13px; /* Размер шрифта для текста вознаграждений */
+  color: #000; /* Цвет текста */
+}
+
+.reward-cookies {
+  font-weight: bold; /* Жирный текст */
+}
+
+.reward-batteries {
+  font-weight: bold; /* Жирный текст */
+}
+
+
+.balance-info {
+  height: 100px; /* Высота контейнера */
+  line-height: 100px; /* Совпадает с высотой контейнера */
+  text-align: center; /* Выравнивание текста по центру */
+  position: absolute;
+  top: 3%;
+  left: 25%;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.849); /* Тень текста */
+}
+
+.balance-coin {
+  font-size: 25px; /* Размер шрифта по умолчанию */
+  font-weight: bold; /* Толщина шрифта по умолчанию */
+  color: rgb(255, 91, 247); /* Цвет текста */
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.849); /* Тень текста */
+}
+
+
+.rewards-info {
+  position: absolute;
+  left: 236px; /* Расстояние от левого края экрана */
+  bottom: 40px; /* Расстояние от нижнего края экрана, чтобы разместить информацию чуть выше кнопки */
+  display: flex;
+  gap: 10px; /* Отступ между элементами */
+  font-size: 13px; /* Размер шрифта для текста вознаграждений */
+  color: #000; /* Цвет текста */
+}
+
+.reward-cookies {
+  font-weight: bold; /* Жирный текст */
+}
+
+.reward-batteries {
+  font-weight: bold; /* Жирный текст */
+}
+
+.tasks-text {
+  position: absolute; /* Абсолютное позиционирование относительно родительского элемента */
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-align: center; /* Выравнивание текста по центру */
+  top: 45%;
+  left: 13%;
+  transform: translate(-50%, -50%); /* Центрирование элемента */
+  white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+.tasks-textt {
+  font-weight: bold; /* Жирный текст */
+}
+
+
+/* Кнопка "Задания" */
+
+
+/* Стили кнопки */
+.navigate__quests__btn {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 14px; /* Расстояние от левого края экрана */
+  bottom: 40%; /* Расстояние от нижнего края контейнера с изображением */
+  width: calc(90% - -10px); /* Ширина кнопки с учетом отступов */
+  padding: 22px 20px; /* Отступы внутри кнопки */
+  background: #d142be; /* Основной цвет фона кнопки */
+  color: white; /* Цвет текста */
+  border: none; /* Без границы */
+  border-radius: 5px; /* Радиус скругления углов */
+  border: 2px solid rgb(153, 153, 153);
+  cursor: pointer; /* Курсор указателя */
+  transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
+  font-size: 16px; /* Размер шрифта */
+  background-image: url('https://i.ibb.co/BGBS4Jg/photo-2024-08-05-00-39-19.jpg'); /* Путь к изображению */
+  background-size: 15% 70%; /* Размер изображения (20% ширины и 100% высоты кнопки) */
+  background-repeat: no-repeat; /* Не повторять изображение */
+  background-position: 10px; /* Размещение изображения слева по центру */
+  font-family: 'Jaro', sans-serif;
+}
+
+.navigate__quests__btn:hover {
+  background: #8b0062; /* Цвет фона при наведении */
+  transform: scale(1.05); /* Увеличение кнопки при наведении */
+}

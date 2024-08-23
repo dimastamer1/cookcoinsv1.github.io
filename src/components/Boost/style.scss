@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&display=swap');
+
+.page-container {
+  position: relative; /* Обеспечивает относительное позиционирование для псевдоэлемента */
+  height: 100vh; /* Высота экрана */
+  overflow: hidden; /* Блокируем прокрутку всей страницы */
+}
+
+.page-container::before {
+  content: ""; /* Пустое содержимое для псевдоэлемента */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 86, 236, 0.473); /* Полупрозрачный черный фон */
+  z-index: -1; /* Помещаем псевдоэлемент за остальными элементами */
+}
+
+
+.total-coins {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff; // Цвет текста
+  text-shadow: 
+  2px 2px 2px #0e3055, /* Основная тень */
+  -1px -1px 2px #0e305500, /* Альтернативная тень */
+  1px -1px 2px #0e305500, /* Альтернативная тень */
+  -1px 1px 2px rgba(134, 134, 134, 0); /* Альтернативная тень */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Jaro', sans-serif;
+}
+
+
+.daily-boosters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  .booster-status {
+    display: flex;
+    align-items: center;
+    background: #c8fbff; /* Фоновый цвет кнопок */
+    padding: 10px;
+    border: 2px solid #0e3055; /* Граница кнопок */
+    border-radius: 10px;
+    font-size: 18px;
+    color: #000000; // Белый цвет текста
+    font-family: 'Jaro', sans-serif;
+  }
+}
+
+.booster-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 97%;
+  padding: 10px;
+  background: #c8fbff; /* Фоновый цвет кнопок */
+  border: 2px solid #0e3055; /* Граница кнопок */
+  border-radius: 5px;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-family: 'Jaro', sans-serif;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  
+  .emoji-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0364f5a4; // Серый фон за смайликом
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-family: 'Jaro', sans-serif;
+    border: 2px solid #0e3055; /* Граница кнопок */
+  }
+
+  .booster-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px;
+    color: #020101; // Белый цвет текста
+    margin: 0;
+    font-family: 'Jaro', sans-serif;
+  }
+
+  .booster-button {
+    background-color: #94e1ff; // Желтый цвет кнопок
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Jaro', sans-serif;
+
+    &:disabled {
+      background-color: #666666;
+      cursor: not-allowed;
+    }
+    
+    &:hover:not(:disabled) {
+      background-color: #0e3055;
+    }
+  }
+}
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(5, 86, 236, 0.13); /* Полупрозрачный фон */
+    border-radius: 0px; // Закругленные углы
+    transition: 0.5s;
+    font-family: 'Jaro', sans-serif;
+    position: absolute;
+    width: 100vw; /* Ширина 90% от ширины экрана */
+    height: 100vh; /* Высота по содержимому */
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    box-sizing: border-box; /* Учитываем padding в размерах элемента */
+  }
+
+.navigate__home__btn {
+  position: fixed;
+  top: 6px; /* Расположение от верхнего края окна просмотра */
+  left: 6px; /* Расположение от левого края окна просмотра */
+  padding: 10px 20px;
+  background-image: radial-gradient(circle at 50% -20.71%, #faffff 0, #d8f0fa 25%, #b5def2 50%, #92cbeb 75%, #72b9e5 100%);
+  color: rgb(0, 0, 0);
+  border: 2px solid #0e3055; /* Граница кнопок */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+}
+
+.navigate__home__btn:hover {
+  background-image: radial-gradient(circle at 50% -20.71%, #d0e0f0 0, #a0c1e0 25%, #7a9fcf 50%, #5478bf 75%, #2d5eab 100%);
+  transform: scale(1.05);
+}
+
+.selected-skin {
+  border: 3px solid lightgreen;
+  animation: apply-skin 0.5s ease-in-out;
+}
+
+@keyframes apply-skin {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

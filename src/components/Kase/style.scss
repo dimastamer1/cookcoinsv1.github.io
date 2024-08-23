@@ -1,0 +1,138 @@
+
+
+.top-button {
+  background: #99f5fc;
+  color: rgb(0, 0, 0); /* Белый текст */
+  border-radius: 8px; /* Закругленные углы */
+  padding: 10px 20px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Выравнивание элементов по краям */
+  gap: 8px; /* Расстояние между иконкой и текстом */
+  cursor: pointer; /* Курсор-указатель при наведении */
+  width: calc(95% - 32px); /* Растягиваем кнопку по ширине экрана */
+  box-sizing: border-box; /* Чтобы padding не выходил за пределы ширины */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: 2px solid #0e3055;
+  transition: background-color 0.3s ease;
+  margin-left: 25px; /* Смещение кнопки вправо */
+  font-family: 'Jaro', sans-serif;
+  
+  position: relative; /* Относительное позиционирование */
+  top: 5%; /* Смещение вниз на 15% */
+
+  &:hover {
+    background-color: #3b4048; /* Более светлый оттенок при наведении */
+  }
+
+  &:active {
+    background-color: #01ada5; /* Цвет при нажатии */
+  }
+
+  svg {
+    font-size: 35px; /* Размер иконки */
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+  }
+  
+  .text {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .value {
+    background-color: #40b4ff; /* Цвет фона для блока с числом и иконкой */
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0); /* Цвет текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .cookie-icon {
+      margin-left: 5px;
+      font-size: 18px; /* Размер иконки печенья */
+    }
+  }
+}
+
+.referral-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование кнопок по горизонтали */
+  position: relative; /* Для правильного позиционирования счётчика */
+}
+
+.navigate__home__btn {
+  margin-bottom: 20px; /* Отступ между кнопками */
+}
+
+.spacer {
+  height: 450px; /* Высота отступа между кнопками */
+}
+
+.styled-button {
+  background: #ebc080;
+  color: rgb(0, 0, 0); /* Черный текст */
+  border-radius: 8px; /* Закругленные углы */
+  padding: 7px 23px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Выравнивание элементов по краям */
+  gap: 8px; /* Расстояние между иконкой и текстом */
+  cursor: pointer; /* Курсор-указатель при наведении */
+  width: calc(95% - 32px); /* Растягиваем кнопку по ширине экрана */
+  box-sizing: border-box; /* Чтобы padding не выходил за пределы ширины */
+  font-family: 'Jaro', sans-serif;
+  font-weight: bold;
+  border: 2px solid #000000;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  background-color: #ffbb54; /* Цвет при наведении */
+}
+
+/* Стили для счётчика totalCoins */
+.total-coins-display {
+  position: absolute; /* Позиционируем относительно родителя */
+  top: 10%;
+  left: 0;
+  background-color: #91353500;
+  color: #ebc080;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  padding: 10px;
+  border-bottom: 1px solid #df0a0a00;
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 1000; /* Чтобы элемент был над другими */
+  width: 100%; /* Полная ширина */
+  text-align: center; /* Центрирование текста */
+}
+
+.animation-container {
+  position: fixed; /* Положение фиксированное, чтобы оно отображалось поверх всего */
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование по вертикали и горизонтали */
+  z-index: 1000; /* Убедитесь, что анимация поверх других элементов */
+}
+
+.animation-img {
+  width: 200px; /* Установите нужный размер */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.background-image {
+  position: fixed; /* Зафиксировать изображение, чтобы оно оставалось на месте при прокрутке */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Растянуть изображение по ширине экрана */
+  height: 100%; /* Растянуть изображение по высоте экрана */
+  z-index: -1; /* Разместить изображение позади всего контента */
+  background: url('https://i.ibb.co/3T86Kff/1671689675-kalix-club-p-fon-dlya-platformera-instagram-3.jpg') no-repeat center center;
+  background-size: cover; /* Масштабировать изображение, чтобы оно покрывало весь экран */
+  opacity: 0.7; /* Настройте прозрачность для более мягкого фона */
+}

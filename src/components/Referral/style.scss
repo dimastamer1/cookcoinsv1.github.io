@@ -1,0 +1,27 @@
+// Referral.scss
+
+.referral-container {
+  padding: 20px;
+}
+
+.navigate__home__btn {
+  position: fixed;
+  top: -6px; /* Расположение от верхнего края окна просмотра */
+  left: 6px; /* Расположение от левого края окна просмотра */
+  padding: 10px 20px;
+  background-image: radial-gradient(circle at 50% -20.71%, #faffff 0, #d8f0fa 25%, #b5def2 50%, #92cbeb 75%, #72b9e5 100%);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(92, 92, 92); /* Черная обводка вокруг кнопки */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+}
+
+.navigate__home__btn:hover {
+  background-image: radial-gradient(circle at 50% -20.71%, #d0e0f0 0, #a0c1e0 25%, #7a9fcf 50%, #5478bf 75%, #2d5eab 100%);
+  transform: scale(1.05);
+}
+
+
+

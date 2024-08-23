@@ -1,0 +1,68 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.navigate__home__btn {
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	margin-top: 30px;
+}
+@media screen and (min-width: 1020px) {
+	.navigate__home__btn {
+		display: none;
+	}
+
+	.hide__total__coins{
+		display: none;
+	}
+}
+
+.fade-up {
+  animation: fade-up 1s;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  20% {
+    opacity: 0.9;
+    transform: translateY(-5px);
+  }
+  40% {
+    opacity: 0.75;
+    transform: translateY(-13px);
+  }
+  60% {
+    opacity: 0.55;
+    transform: translateY(-25px);
+  }
+  80% {
+    opacity: 0.3;
+    transform: translateY(-42px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+}

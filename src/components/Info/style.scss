@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+.infoOfLevelsDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 130px 0 0 0;
+  
+
+  span {
+    opacity: 1;
+    color: rgb(30, 168, 49);
+    transition: 0.5s;
+  }
+
+  h1 {
+    margin: 40px 0 20px 0;
+
+  }
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+.navigate__home__btn {
+  background-color: rgba(69, 226, 109, 0.712); /* Черный фон внутри кнопки */
+  border: 2px solid #000000ef; /* Синяя обводка */
+  color: rgb(0, 0, 0); /* Белый цвет текста */
+  font-family: "Jaro", sans-serif; /* Применение шрифта Jaro */
+  font-weight: 400; /* Вес шрифта */
+  font-style: normal; /* Стиль шрифта */
+  font-optical-sizing: auto; /* Оптическое масштабирование шрифта */
+  font-size: 16px; /* Размер шрифта */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border-radius: 5px; /* Скругление углов */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  transition: all 0.3s ease; /* Плавный переход для всех изменений */
+  text-align: center; /* Выравнивание текста по центру */
+  
+  &:hover {
+    background-color: #525151; /* Темно-серый фон при наведении */
+    border-color: #000000; /* Цвет обводки при наведении */
+  }
+  
+  &:focus {
+    outline: none; /* Убрать стандартное обрамление фокуса */
+  }
+}
+
+.info-container {
+  position: relative; // Позволяет позиционировать дочерние элементы относительно этого контейнера
+}
+
+.infoOfLevelsDisplay {
+  z-index: 1; // Чтобы текст был поверх квадрата
+  position: relative; // Убедитесь, что текст не перекрывает квадрат
+}
+
+.background-square {
+  position: absolute; // Позволяет позиционировать квадрат относительно контейнера
+  bottom: -47px; // Разместить квадрат внизу
+  left: -40px; // Выравнивание по горизонтали
+  width: 150%; // Занимает всю ширину контейнера
+  height: 300px; // Задайте нужную высоту
+  background: #c8fbff; /* Фоновый цвет кнопок */ /* Цвет фона с прозрачностью */
+  border: 2px solid #0e3055; /* Граница кнопок */// Черная обводка с прозрачностью
+  z-index: 0; // Разместить квадрат под текстом
+  border-radius: 8px 8px 8px 8px; // Закругленные углы
+}
+
+
+
