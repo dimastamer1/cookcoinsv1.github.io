@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build" # Команда для сборки проекта
+  publish = "build" # Папка, куда будут собираться статические файлы
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
